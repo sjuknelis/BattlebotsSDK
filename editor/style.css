@@ -1,0 +1,32 @@
+html,body {
+  overflow-y: hidden;
+}
+.nav {
+  background-color: #ddd;
+}
+.nav-item {
+  vertical-align: middle;
+}
+.nav a {
+  height: 100%;
+  line-height: 200%;
+}
+.active {
+  background-color: #dfd;
+}
+#editor {
+  height: 60vh;
+}
+.build {
+  margin: 0.5em;
+}
+#log {
+  width: calc(100vw - 1.5em);
+  height: calc(40vh - 54px - 1.5em);
+  white-space: pre-wrap;
+  font-family: Courier;
+  margin: 0.75em;
+  border: 1px solid black;
+  overflow-y: scroll;
+  line-height: normal;
+}
