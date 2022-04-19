@@ -8,7 +8,7 @@ const port = process.argv[2] || 8000;
 app.use("/editor",express.static(__dirname + "/editor"));
 app.use("/log.log",express.static(__dirname + "/log.log"));
 
-app.get("/python/*.py",(req,res) => {
+app.get("/python/*",(req,res) => {
   fs.readFile(__dirname + req.url,(err,body) => {
     if ( err ) throw err;
     res.send(body);
