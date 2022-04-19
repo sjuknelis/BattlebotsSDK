@@ -1,9 +1,4 @@
-cd $(dirname $0)/java
+cd $(dirname $0)/python
 echo "Build started at $(date)"
-javac *.java || {
-  echo "Build failed."
-  exit
-}
-echo "Build successful, running $1..."
-java Main "$1"
+python "$1"
 echo "Stopped."

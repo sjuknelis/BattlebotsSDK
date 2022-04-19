@@ -8,7 +8,7 @@ const port = process.argv[2] || 8000;
 app.use("/editor",express.static(__dirname + "/editor"));
 app.use("/log.log",express.static(__dirname + "/log.log"));
 
-app.get("/java/*.java",(req,res) => {
+app.get("/python/*.py",(req,res) => {
   fs.readFile(__dirname + req.url,(err,body) => {
     if ( err ) throw err;
     res.send(body);
@@ -17,7 +17,7 @@ app.get("/java/*.java",(req,res) => {
 
 app.use(bodyParser.json());
 
-app.put("/java/*.java",(req,res) => {
+app.put("/python/*.py",(req,res) => {
   fs.writeFile(__dirname + req.url,req.body.data,err => {
     if ( err ) throw err;
     let path = req.url.split("/");
